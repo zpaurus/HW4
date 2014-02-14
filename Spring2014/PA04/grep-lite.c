@@ -23,8 +23,8 @@ int main (int argc, char** argv)
             printf("string. grep-lite will search standard input line by\n");
             printf("line, and (by default) print out those lines which\n");
             printf("contain pattern as a substring.\n\n");
-			printf("  -v, --invert-match     select non-matching lines\n");
-			printf("  -n, --line-number      print line numbers with output\n");
+			printf("  -v, --invert-match     print non-matching lines\n");
+			printf("  -n, --line-number      print line number with output\n");
 			printf("  -q, --quiet            suppress all output\n\n");
 			printf("Exit status is 0 if any line is selected, 1 otherwise;\n");
 			printf("if any error occurs, then the exit status is 2.\n\n");
@@ -66,7 +66,7 @@ int main (int argc, char** argv)
 	}
 	while(fgets(input, sizeof(input), fp))
 	{
-		if(input == NULL)
+		if(*input == '\n')
 		{
 			break;
 		}
@@ -109,7 +109,7 @@ int main (int argc, char** argv)
 	//REGULAR FUNCTIONALITY WORKS
 	//-v works
 	//-q works...?
-	//Working on -n
+	//Working on -n printing one extra line, might be true for -v also. must check
 	
 	return toreturn;
 }
