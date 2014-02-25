@@ -1,4 +1,3 @@
-
 Please read the entire README (including FAQ at the end) before
 starting your assignment, or asking for help.
 
@@ -7,9 +6,9 @@ starting your assignment, or asking for help.
 This assignment asks you to solve problems using recursion, which is
 one of the most important and powerful concepts in computer
 programming. Recursion is a little tricky to get used to at first;
-however, with a little experience, it is very straight-forward. Pay
+however, with a little experience, it is very straightforward. Pay
 very close attention to this assignment, since recursion is heavily
-used through-out the rest of the course, including assignments and
+used throughout the rest of the course, including assignments and
 exams.
 
 // ~ Learning Goals ~ //
@@ -40,7 +39,7 @@ follow the instructions.
 
 // ~ The Partition Problem ~ //
 
-This assignment asks you to solve a set of relationed problems:
+This assignment asks you to solve a set of related problems:
 
 * partition a positive integer with different restrictions
 
@@ -93,10 +92,18 @@ program.
 
 // ~ Hint ~ //
 
-You will need some sort of int buffer to contain the partition results
-as it is created. If you partition the number N, then you will a
+a) You will need some sort of int buffer to contain the partition results
+as they are created. If you partition the number N, then you will need a
 buffer (array of ints) that can store N values. (i.e., the largest
-partition of N is 1+1+...+1.)
+partition of N is 1+1+...+1).
+
+b) As mentioned above, you will be asked to print partitions that satisfy 
+certain restrictions. If an input has no partitions that satisfy the 
+restriction of the function you're in, do NOT print an error message! 
+Instead, since there are 0 partitions that abide by that restriction, 
+simply do nothing and return.
+Eg. See 'partitionPrime(1)', located in the expected output file 
+'partitionPrime.output'.
 
 ----------------------------------------------------------------------
 
